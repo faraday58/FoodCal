@@ -7,3 +7,4 @@ data class DailyFood(
     val description:String = "",
     val imageRes:String = ""
 )
+

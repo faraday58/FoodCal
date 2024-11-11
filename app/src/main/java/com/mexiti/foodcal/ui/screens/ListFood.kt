@@ -10,26 +10,34 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.tooling.preview.Preview
 import com.mexiti.foodcal.R
-import com.mexiti.foodcal.model.DayRepository
-import com.mexiti.foodcal.ui.theme.FoodAppTheme
+import com.mexiti.foodcal.viewmodel.DailyFoodViewModel
 
 
 @Composable
-fun FoodsApp(){
+fun FoodsApp(DailyFoodVM:DailyFoodViewModel){
+    LaunchedEffect(Unit) {
+        DailyFoodVM.fetchDaysFood()
+    }
+
     Scaffold(
         topBar = {
             FoodTopBar()
         }
     ) {
-        it ->
+        val dataFood by DailyFoodVM.dataDailyFood.collectAsState()
+
         LazyColumn(
             contentPadding = it
         ) {
-            items(DayRepository.days) { food -> CardDayInfo(dayFood = food) }
+            items(dataFood) {
+                food -> CardDayInfo(dayFood = food)
+            }
 
         }
 
@@ -57,7 +65,7 @@ fun FoodTopBar(){
     )
 }
 
-
+/*
 @Preview(showBackground = true)
 @Composable
 fun FoodAppPreview(){
@@ -65,3 +73,4 @@ fun FoodAppPreview(){
         FoodsApp()
     }
 }
+*/
