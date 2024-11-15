@@ -23,6 +23,9 @@ class DailyFoodViewModel:ViewModel() {
         private set
 
 
+
+
+
     fun fetchDaysFood(){
         firestore.collection("DayFood")
             .addSnapshotListener {
@@ -38,14 +41,9 @@ class DailyFoodViewModel:ViewModel() {
                         val myDocument = document.toObject(DailyFood::class.java)
                             .copy(idDoc = document.id)
                         documents.add(myDocument)
-
-
                     }
                 }
                 _dataDailyFood.value = documents
             }
     }
-
-
-
 }
