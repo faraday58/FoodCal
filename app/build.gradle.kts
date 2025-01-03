@@ -58,7 +58,9 @@ dependencies {
     implementation(platform(libs.androidx.compose.bom))
 
     implementation(libs.retrofit2.retrofit)
-    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+    implementation(libs.converter.gson.v290)
+    implementation(libs.androidx.navigation.compose)
+
 
 
     //Manage Images

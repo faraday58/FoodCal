@@ -31,4 +31,8 @@
     <string name="description6">
     El **Sándwich con Fresas** es como un **almuerzo de súper héroe** porque combina lo mejor de un sándwich suave y sabroso con las fresas más dulces y jugosas. El sándwich puede tener jamón y queso, que se derriten en tu boca y te llenan de energía para jugar todo el día. Y al lado tienes fresas rojas, como pequeñas explosiones de sabor dulce que hacen que todo el plato sea aún más divertido y delicioso. Es la combinación perfecta: algo suave y algo fresco para que cada mordida sea una aventura. ¡Es como tener un combo de poder para un día lleno de diversión!
     </string>
+    <string name="selected_image">Imagen Seleccionada</string>
+    <string name="default_image">Imagen predeterminada</string>
+    <string name="touch_image">Toca para seleccionar una imagen</string>
+    <string name="add_reset">Agregar receta</string>
 </resources>

@@ -27,7 +27,7 @@ class DailyFoodViewModel:ViewModel() {
 
 
     fun fetchDaysFood(){
-        firestore.collection("DayFood")
+        firestore.collection("DayFood").orderBy("day")
             .addSnapshotListener {
                                  querySnapshot,
                                  error ->
