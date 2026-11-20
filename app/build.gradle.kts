@@ -55,6 +55,7 @@ dependencies {
     implementation(libs.androidx.activity.compose)
     implementation(libs.coil.compose)
     implementation(libs.coil.network.okhttp)
+    implementation(libs.retrofit)
     implementation(libs.converter.gson)
 //
     implementation(platform(libs.androidx.compose.bom))
